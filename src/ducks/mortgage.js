@@ -15,29 +15,29 @@ export default (state = initialState, action) => {
     case SET_INITIAL:
       return {
         ...state,
-        initial: +action.val
+        initial: action.val
       };
     case SET_RATE:
       return {
         ...state,
-        rate: +action.val
+        rate: action.val
       };
     case SET_YEARS:
       return {
         ...state,
-        years: +action.val
+        years: action.val
       };
     case SET_MONTHLY_OVERPAYMENT:
       return {
         ...state,
-        monthlyOverpayment: +action.val
+        monthlyOverpayment: action.val
       };
     default:
       return state;
   }
 }
 
-export const setInitial = (event) => ({ type: SET_INITIAL, val: event.target.value });
-export const setYears = (event) => ({ type: SET_YEARS, val: event.target.value });
-export const setRate = (event) => ({ type: SET_RATE, val: event.target.value });
-export const setMonthlyOverpayment = (event) => ({ type: SET_MONTHLY_OVERPAYMENT, val: event.target.value });
+export const setInitial = val => ({ type: SET_INITIAL, val });
+export const setYears = val => ({ type: SET_YEARS, val });
+export const setRate = val => ({ type: SET_RATE, val });
+export const setMonthlyOverpayment = val => ({ type: SET_MONTHLY_OVERPAYMENT, val });
